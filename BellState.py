@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[176]:
+
+
 import qiskit
 from qiskit import Aer
 from qiskit.visualization import plot_histogram
@@ -8,7 +14,7 @@ import matplotlib.pyplot as plt
 
 class BellState():
     
-    def __init__(self, number_of_qubits, initial_state_qubit, backend, shots):
+    def __init__(self, number_of_qubits, initial_state_qubit, backend, shots, mode = "training"):
         
         self.number_of_qubits = number_of_qubits
         self.circuit = qiskit.QuantumCircuit(self.number_of_qubits) #qiskit takes care of adding classical bits when measurements are performed
@@ -26,8 +32,9 @@ class BellState():
         self.circuit.rx(self.theta_rx_q0, 0)
         self.circuit.cx(0,1)
         self.circuit.rx(self.theta_rx_q1,1)
-
-        self.circuit.measure_all()
+        
+        if(mode == "training"):
+            self.circuit.measure_all()
         
                                 
     def optimize_params(self, n_iterations, learning_rate):
@@ -48,9 +55,7 @@ class BellState():
         return cost_as_norm_error
         
     def get_probabilities_vector_and_counts(self, parameter_vector):
-        parameter_binds = self._prepare_parameter_bindings(parameter_vector)
-        job = qiskit.execute(self.circuit, self.backend, shots = self.shots, parameter_binds = [parameter_binds])
-        counts = job.result().get_counts(self.circuit)
+        counts = self._simulate(parameter_vector).get_counts(self.circuit)
 
         probabilities_vector = np.zeros(2**self.number_of_qubits)
         states = ['00','01','10','11']
@@ -70,15 +75,25 @@ class BellState():
         parameter_binds[self.theta_ry_q0] = parameter_vector[2]
         
         return parameter_binds
+    
+    def _simulate(self, parameter_vector):
+        parameter_binds = self._prepare_parameter_bindings(parameter_vector)
+        job = qiskit.execute(self.circuit, self.backend, shots = self.shots, parameter_binds = [parameter_binds])
         
-    def visualize_circuit(self):
-        return self.circuit.draw()
+        return job.result()
+    
+    def get_state_vector(self, parameter_vector):
+        return self._simulate(parameter_vector).get_statevector(self.circuit)
     
     def visualize_result(self, optimizer_result):
         optimized_parameter_vector = optimizer_result[0]
         probabilities_vector, counts = self.get_probabilities_vector_and_counts(optimized_parameter_vector)
         return counts, optimized_parameter_vector
-
+    
+    def visualize_circuit(self):
+        return self.circuit.draw()
+    
+    
 if __name__=="__main__":
     #Set the circuit hyperparameters
     number_of_qubits = 2
@@ -101,4 +116,28 @@ if __name__=="__main__":
     result_counts, result_params = circuit.visualize_result(result)
     histogram = plot_histogram(result_counts)
     print(result_params)
+    
+    #Checking final statevector
+    backend = Aer.get_backend("statevector_simulator")
+    circuit = BellState(number_of_qubits, initial_state_qubit, backend, shots, mode = "testing")
+    
+    print(circuit.get_state_vector(result_params))
+
+
+# In[173]:
+
+
+histogram
+
+
+# In[153]:
+
+
+result_counts
+
+
+# In[ ]:
+
+
+
 
