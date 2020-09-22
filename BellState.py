@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[176]:
-
-
 import qiskit
 from qiskit import Aer
 from qiskit.visualization import plot_histogram
@@ -122,22 +116,3 @@ if __name__=="__main__":
     circuit = BellState(number_of_qubits, initial_state_qubit, backend, shots, mode = "testing")
     
     print(circuit.get_state_vector(result_params))
-
-
-# In[173]:
-
-
-histogram
-
-
-# In[153]:
-
-
-result_counts
-
-
-# In[ ]:
-
-
-
-
