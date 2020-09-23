@@ -23,7 +23,7 @@ class BellState():
         self.theta_ry_q1 = qiskit.circuit.Parameter('theta_ry_q1')
         
         self.circuit.ry(self.theta_ry_q0, 0)
-        self.circuit.rx(self.theta_ry_q1, 1)
+        self.circuit.ry(self.theta_ry_q1, 1)
         self.circuit.cx(0,1)
         
         if(mode == "training"):
