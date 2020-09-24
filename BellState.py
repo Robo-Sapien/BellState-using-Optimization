@@ -1,7 +1,6 @@
 import qiskit
 from qiskit import Aer
 from qiskit.visualization import plot_histogram
-from qiskit.aqua.components.optimizers import AQGD
 from qiskit.aqua.components.optimizers import COBYLA
 
 import time
