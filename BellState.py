@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
 import qiskit
 from qiskit import Aer
 from qiskit.visualization import plot_histogram
@@ -236,28 +230,4 @@ if __name__=="__main__":
     print("Optimized paramters: {}\nFinal Statevector: {}\nFinal loss: {}".format(result_params, 
                                                                                    final_statevector, 
                                                                                    final_loss))
-
-
-# In[10]:
-
-
-histogram
-
-
-# In[11]:
-
-
-result_counts
-
-
-# In[12]:
-
-
-visual_circuit
-
-
-# In[ ]:
-
-
-
-
+    
