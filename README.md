@@ -18,6 +18,7 @@ How to make sure you produce state  |01⟩  +  |10⟩  and not any other combina
 Initial state to the circuit is |00⟩. I have used 2 RY gates and 1 CNOT gate.
 <circuit image>
 Q. *Why did I measure the qubits? Wouldn't that collapse the final statevector? How would I write the loss function without the statevector?*
+  
 A. The task mentioned specifically to perform simulation via sampling *implying* measurements are necessary.
 Yes it would collapse the statevector, hence I had to come up with a different approach to write a good loss function that incorporates the sampling effect. 
 
