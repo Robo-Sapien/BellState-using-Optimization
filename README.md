@@ -59,7 +59,7 @@ Optimized paramters: [1.04222172 3.19447852]
 Final Statevector: [-0.0229304 +0.j  0.49766981+0.j  0.86696349+0.j -0.01316292+0.j]
 Final loss: 1.8325732137625914
 
-![Optional Text](../master/plost/histogram_shots10.png)
+![Optional Text](../master/plots/histogram_shots10.png)
 
 - shots100
 Training Time: 0.4119124412536621
@@ -75,7 +75,7 @@ Optimized paramters: [1.61166117 3.1334394 ]
 Final Statevector: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
 Final loss: 1.3866884395455952
 
-![Optional Text](../master/[plots/histogram_shots1000.png)
+![Optional Text](../master/plots/histogram_shots1000.png)
 
 
 ### Library & framework versions
