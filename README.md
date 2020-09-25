@@ -14,7 +14,7 @@ How to make sure you produce state  |01⟩  +  |10⟩  and not any other combina
 
 ## Solution
 `Note: Multiple solutions exist for this problem & bonus question`
-#### Circuit
+### Circuit
 Initial state to the circuit is |00⟩. I have used 2 RY gates and 1 CNOT gate.
 
 ![Optional Text](../master/plots/circuit.png)
@@ -26,7 +26,7 @@ Yes it would collapse the statevector, hence I had to come up with a different a
 
 
 
-#### Bonus Question
+### Bonus Question
 Q. *How did I ensure no relative phase between |01⟩ & |10⟩ ?*
 
 A. I ensured no relative by these restrictions (**Bloch sphere** offers great visualization for these):
@@ -35,7 +35,7 @@ A. I ensured no relative by these restrictions (**Bloch sphere** offers great vi
 
 **Note:** These gate restrictions to avoid relative phase work only if we start at |0⟩ qubit, which is true in our task.
 
-#### Optimization details
+### Optimization details
 The optimizer used is COBYLA. I have written two cost functions: (1) Squared error loss (2) Entropy loss. I am using Entropy loss as it gives slightly better results. 
 
 Q. *Why is entropy loss giving better results than squared error loss?*
