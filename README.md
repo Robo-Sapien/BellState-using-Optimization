@@ -1,6 +1,6 @@
 # Bell State Using Optimization
 
-### Problem Statement
+## Problem Statement
 Implement a circuit that returns |01⟩ and |10⟩ with equal probability (50% for each).
 Requirements :
 - The circuit should consist only of CNOTs, RXs and RYs. 
@@ -12,7 +12,7 @@ Requirements :
 How to make sure you produce state  |01⟩  +  |10⟩  and not any other combination of |01⟩ + ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi})|10⟩ 
 (for example |01⟩ - |10⟩)?
 
-### Solution
+## Solution
 `Note: Multiple solutions exist for this problem & bonus question`
 #### Circuit
 Initial state to the circuit is |00⟩. I have used 2 RY gates and 1 CNOT gate.
@@ -42,7 +42,7 @@ Q. *Why is entropy loss giving better results than squared error loss?*
 
 A. The target is a probabilities vector, hence the optimization is closer to multi-label classification than regression. Hence a entropy loss performs better than a squared error loss. If the target would have been the statevector instead, I would have used the squared error loss. 
 
-#### Results
+## Results
 
 - shots 1
 Training Time: 0.11134672164916992
