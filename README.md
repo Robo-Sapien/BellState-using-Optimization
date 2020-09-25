@@ -16,7 +16,8 @@ How to make sure you produce state  |01⟩  +  |10⟩  and not any other combina
 `Note: Multiple solutions exist for this problem & bonus question`
 #### Circuit
 Initial state to the circuit is |00⟩. I have used 2 RY gates and 1 CNOT gate.
-<circuit image>
+
+![Optional Text](../master/plots/circuit.png)
   
 Q. *Why did I measure the qubits? Wouldn't that collapse the final statevector? How would I write the loss function without the statevector?*
   
