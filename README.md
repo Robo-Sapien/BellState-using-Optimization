@@ -32,8 +32,90 @@ A. I ensured no relative by these restrictions (**Bloch sphere** offers great vi
 - **Don't use RX gates**: RX gates tend to bring the qubit vector outside x-z plane *which contributes to a non zero azimuthal angle, ![formula](https://render.githubusercontent.com/render/math?math=\phi)*. Hence it leads to relative phase = ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi}). Hence our objective is to keep the qubit vector in x-z plane.
 - **Bound the RY parameters in (0, ![formula](https://render.githubusercontent.com/render/math?math=\pi))**: Since we use only RY gates, there is a finite chance that relative phase = -1 appears if vector is close to the negative x-axis.
 
-**Note:** These gate restrictions to avoid relative phase work only if we start at |0⟩ qubit, which is true in our task.
+**Note:** These ga#### Optimization details
+The optimizer used is COBYLA. I have written two cost functions: (1) Squared error loss (2) Entropy loss. I am using Entropy loss as it gives slightly better results. 
+
+Q. *Why is entropy loss giving better results than squared error loss?*
+
+A. The target is a probabilities vector, hence the optimization is closer to multi-label classification than regression. Hence a entropy loss performs better than a squared error loss. If the target would have been the statevector instead, I would have used the squared error loss. 
+#### Results
+
+shots 1
+Training Time: 0.11134672164916992
+Optimized paramters: [1.14449752 3.17674159]
+Final Statevector: [-0.01477384+0.j  0.54144029+0.j  0.84055552+0.j -0.00951651+0.j]
+Final loss: 13.815507557965773
+
+
+shots 10
+Training Time: 0.3823280334472656
+Optimized paramters: [1.04222172 3.19447852]
+Final Statevector: [-0.0229304 +0.j  0.49766981+0.j  0.86696349+0.j -0.01316292+0.j]
+Final loss: 1.8325732137625914
+
+shots100
+Training Time: 0.4119124412536621
+Optimized paramters: [1.70888822 3.03620942]
+Final Statevector: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
+Final loss: 1.3898948422670188
+
+shots1000
+Training Time: 0.5514860153198242
+Optimized paramters: [1.61166117 3.1334394 ]
+Final Statevector: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
+Final loss: 1.3866884395455952
+
+
+### Library & framework versions
+- Python: 3.7.7
+- matplotlib: 3.2.0
+- qiskit-terra: 0.15.2
+- qiskit-aer: 0.6.1
+- qiskit-ignis: 0.4.0
+- qiskit-ibmq-provider: 0.9.0
+- qiskit-aqua: 0.7.5
+- qiskit: 0.21.0te restrictions to avoid relative phase work only if we start at |0⟩ qubit, which is true in our task.
 
 #### Optimization details
+The optimizer used is COBYLA. I have written two cost functions: (1) Squared error loss (2) Entropy loss. I am using Entropy loss as it gives slightly better results. 
 
-#### Graphs & Plots
+Q. *Why is entropy loss giving better results than squared error loss?*
+
+A. The target is a probabilities vector, hence the optimization is closer to multi-label classification than regression. Hence a entropy loss performs better than a squared error loss. If the target would have been the statevector instead, I would have used the squared error loss. 
+#### Results
+
+shots 1
+Training Time: 0.11134672164916992
+Optimized paramters: [1.14449752 3.17674159]
+Final Statevector: [-0.01477384+0.j  0.54144029+0.j  0.84055552+0.j -0.00951651+0.j]
+Final loss: 13.815507557965773
+
+
+shots 10
+Training Time: 0.3823280334472656
+Optimized paramters: [1.04222172 3.19447852]
+Final Statevector: [-0.0229304 +0.j  0.49766981+0.j  0.86696349+0.j -0.01316292+0.j]
+Final loss: 1.8325732137625914
+
+shots100
+Training Time: 0.4119124412536621
+Optimized paramters: [1.70888822 3.03620942]
+Final Statevector: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
+Final loss: 1.3898948422670188
+
+shots1000
+Training Time: 0.5514860153198242
+Optimized paramters: [1.61166117 3.1334394 ]
+Final Statevector: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
+Final loss: 1.3866884395455952
+
+
+### Library & framework versions
+- Python: 3.7.7
+- matplotlib: 3.2.0
+- qiskit-terra: 0.15.2
+- qiskit-aer: 0.6.1
+- qiskit-ignis: 0.4.0
+- qiskit-ibmq-provider: 0.9.0
+- qiskit-aqua: 0.7.5
+- qiskit: 0.21.0
