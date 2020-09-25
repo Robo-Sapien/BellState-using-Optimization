@@ -32,7 +32,9 @@ A. I ensured no relative by these restrictions (**Bloch sphere** offers great vi
 - **Don't use RX gates**: RX gates tend to bring the qubit vector outside x-z plane *which contributes to a non zero azimuthal angle, ![formula](https://render.githubusercontent.com/render/math?math=\phi)*. Hence it leads to relative phase = ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi}). Hence our objective is to keep the qubit vector in x-z plane.
 - **Bound the RY parameters in (0, ![formula](https://render.githubusercontent.com/render/math?math=\pi))**: Since we use only RY gates, there is a finite chance that relative phase = -1 appears if vector is close to the negative x-axis.
 
-**Note:** These ga#### Optimization details
+**Note:** These gate restrictions to avoid relative phase work only if we start at |0⟩ qubit, which is true in our task.
+
+#### Optimization details
 The optimizer used is COBYLA. I have written two cost functions: (1) Squared error loss (2) Entropy loss. I am using Entropy loss as it gives slightly better results. 
 
 Q. *Why is entropy loss giving better results than squared error loss?*
