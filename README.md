@@ -9,8 +9,8 @@ Requirements :
 - Simulations must be done with sampling (i.e. a limited number of measurements per iteration) and noise. :heavy_check_mark:
 
 ##### Bonus question
-How to make sure you produce state  |01⟩  +  |10⟩  and not any other combination of |01⟩ + ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi})|10⟩ :heavy_check_mark:
-(for example |01⟩ - |10⟩)?
+How to make sure you produce state  |01⟩  +  |10⟩  and not any other combination of |01⟩ + ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi})|10⟩ 
+(for example |01⟩ - |10⟩)? :heavy_check_mark:
 
 ## Solution
 `Note: Multiple solutions exist for this problem & bonus question`
