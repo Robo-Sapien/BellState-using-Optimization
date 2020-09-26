@@ -49,19 +49,19 @@ A. The target is a probabilities vector, hence the optimization is closer to mul
 
 Lets see how the probabilities vary with each iteration for different number of `shots`:
 
-- `shots` = 1
+- `shots` = 1 [Since we are measuring only once per iteration, we see only the 1 collapsed state]
 
 ![Optional Text](../master/OptimizationGifs/Gifshots1.gif)
 
-- `shots` = 10
+- `shots` = 10 [Can see significant probabilities in |00⟩ & |11⟩ states as well]
 
 ![Optional Text](../master/OptimizationGifs/Gifshots10.gif)
 
-- `shots` = 100
+- `shots` = 100 [Big improvement from previous case, insignificant probabilities in |00⟩ & |11⟩ states]
 
 ![Optional Text](../master/OptimizationGifs/Gifshots100.gif)
 
-- `shots` = 1000
+- `shots` = 1000 [As the shots increase, we get better results]
 
 ![Optional Text](../master/OptimizationGifs/Gifshots1000.gif)
 
@@ -70,6 +70,7 @@ Lets see how the probabilities vary with each iteration for different number of 
 Lets compare the results obtained for different number of `shots`:
 
 - `shots` = 1
+
 Training Time: 0.11134672164916992
 
 Optimized paramters: [1.14449752 3.17674159]
@@ -83,6 +84,7 @@ Final loss: 13.815507557965773
 
 
 - `shots` = 10
+
 Training Time: 0.3823280334472656
 
 Optimized paramters: [1.04222172 3.19447852]
@@ -95,6 +97,7 @@ Final loss: 1.8325732137625914
 ![Optional Text](../master/plots/histogram_shots10.png)
 
 - `shots` = 100
+
 Training Time: 0.4119124412536621
 
 Optimized paramters: [1.70888822 3.03620942]
@@ -107,6 +110,7 @@ Final loss: 1.3898948422670188
 ![Optional Text](../master/plots/histogram_shots100.png)
 
 - `shots` = 1000
+
 Training Time: 0.5514860153198242
 
 Optimized paramters: [1.61166117 3.1334394 ]
