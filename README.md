@@ -69,17 +69,17 @@ Lets see how the probabilities vary with each iteration for different number of 
 
 Lets compare the results obtained for different number of `shots`:
 
-- `shots` = 1
+_`shots` = 1__
 
-**Training Time**: 0.11134672164916992 seconds
+__**Training Time**: 0.11134672164916992 seconds
 
-**Optimized paramters**: [1.14449752 3.17674159]
+__**Optimized paramters**: [1.14449752 3.17674159]
 
-****Final Statevecto**r: [-0.01477384+0.j  0.54144029+0.j  0.84055552+0.j -0.00951651+0.j]
+__**Final Statevecto**r: [-0.01477384+0.j  0.54144029+0.j  0.84055552+0.j -0.00951651+0.j]
 
-**Final loss**: 13.815507557965773
+__**Final loss**: 13.815507557965773
 
-**Final probability distribution**:
+__**Final probability distribution**:
 
 ![Optional Text](../master/plots/histogram_shots1.png)
 
@@ -100,11 +100,11 @@ Lets compare the results obtained for different number of `shots`:
 
 - `shots` = 100
 
-**Training Tim**e: 0.4119124412536621 seconds
+**Training Time**: 0.4119124412536621 seconds
 
 **Optimized paramters**: [1.70888822 3.03620942]
 
-**Final Statevecto**r: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
+**Final Statevector**: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
 
 **Final loss**: 1.3898948422670188
 
@@ -118,7 +118,7 @@ Lets compare the results obtained for different number of `shots`:
 
 **Optimized paramters**: [1.61166117 3.1334394 ]
 
-**Final Statevecto**r: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
+**Final Statevector**: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
 
 **Final loss**: 1.3866884395455952
 
