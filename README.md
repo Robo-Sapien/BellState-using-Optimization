@@ -84,45 +84,45 @@ Lets compare the results obtained for different number of `shots`:
 ![Optional Text](../master/plots/histogram_shots1.png)
 
 
-- `shots` = 10
+* `shots` = 10
 
-**Training Time**: 0.3823280334472656 seconds
+  * **Training Time**: 0.3823280334472656 seconds
 
-**Optimized paramters**: [1.04222172 3.19447852]
+  * **Optimized paramters**: [1.04222172 3.19447852]
 
-**Final Statevector**: [-0.0229304 +0.j  0.49766981+0.j  0.86696349+0.j -0.01316292+0.j]
+  * **Final Statevector**: [-0.0229304 +0.j  0.49766981+0.j  0.86696349+0.j -0.01316292+0.j]
 
-**Final loss**: 1.8325732137625914
+  * **Final loss**: 1.8325732137625914
 
-**Final probability distribution****:
+  * **Final probability distribution****:
 
 ![Optional Text](../master/plots/histogram_shots10.png)
 
-- `shots` = 100
+* `shots` = 100
 
-**Training Time**: 0.4119124412536621 seconds
+  * **Training Time**: 0.4119124412536621 seconds
 
-**Optimized paramters**: [1.70888822 3.03620942]
+  * **Optimized paramters**: [1.70888822 3.03620942]
 
-**Final Statevector**: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
+  * **Final Statevector**: [0.0345833 +0.j 0.75315927+0.j 0.65572653+0.j 0.03972195+0.j]
 
-**Final loss**: 1.3898948422670188
+  * **Final loss**: 1.3898948422670188
 
-**Final probability distribution**:
+  * **Final probability distribution**:
 
 ![Optional Text](../master/plots/histogram_shots100.png)
 
-- `shots` = 1000
+* `shots` = 1000
 
-**Training Time**: 0.5514860153198242 seconds
+  * **Training Time**: 0.5514860153198242 seconds
 
-**Optimized paramters**: [1.61166117 3.1334394 ]
+  * **Optimized paramters**: [1.61166117 3.1334394 ]
 
-**Final Statevector**: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
+  * **Final Statevector**: [0.00282311+0.j 0.72140009+0.j 0.69250653+0.j 0.0029409 +0.j]
 
-**Final loss**: 1.3866884395455952
+  * **Final loss**: 1.3866884395455952
 
-**Final probability distribution**:
+  * **Final probability distribution**:
 
 ![Optional Text](../master/plots/histogram_shots1000.png)
 
