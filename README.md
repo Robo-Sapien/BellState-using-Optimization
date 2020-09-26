@@ -42,6 +42,18 @@ Q. *Why is entropy loss giving better results than squared error loss?*
 
 A. The target is a probabilities vector, hence the optimization is closer to multi-label classification than regression. Hence a entropy loss performs better than a squared error loss. If the target would have been the statevector instead, I would have used the squared error loss. 
 
+- shots 1
+![Optional Text](../master/Optimization gifs/Gifshots1.png)
+
+- shots 10
+![Optional Text](../master/Optimization gifs/Gifshots10.png)
+
+- shots 100
+![Optional Text](../master/Optimization gifs/Gifshots100.png)
+
+- shots 1000
+![Optional Text](../master/Optimization gifs/Gifshots1000.png)
+
 ## Results
 
 - shots 1
