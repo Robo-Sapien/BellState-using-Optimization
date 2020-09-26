@@ -3,13 +3,13 @@
 ## Problem Statement
 Implement a circuit that returns |01⟩ and |10⟩ with equal probability (50% for each).
 Requirements :
-- The circuit should consist only of CNOTs, RXs and RYs. 
-- Start from all parameters in parametric gates being equal to 0 or randomly chosen. 	
-- You should find the right set of parameters using gradient descent (you can use more - advanced optimization methods if you like). 
-- Simulations must be done with sampling (i.e. a limited number of measurements per iteration) and noise.
+- The circuit should consist only of CNOTs, RXs and RYs. :heavy_check_mark:
+- Start from all parameters in parametric gates being equal to 0 or randomly chosen. :heavy_check_mark:
+- You should find the right set of parameters using gradient descent (you can use more - advanced optimization methods if you like). :heavy_check_mark:
+- Simulations must be done with sampling (i.e. a limited number of measurements per iteration) and noise. :heavy_check_mark:
 
 ##### Bonus question
-How to make sure you produce state  |01⟩  +  |10⟩  and not any other combination of |01⟩ + ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi})|10⟩ 
+How to make sure you produce state  |01⟩  +  |10⟩  and not any other combination of |01⟩ + ![formula](https://render.githubusercontent.com/render/math?math=e^{i%20\phi})|10⟩ :heavy_check_mark:
 (for example |01⟩ - |10⟩)?
 
 ## Solution
